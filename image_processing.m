@@ -28,6 +28,7 @@ im_level = uint8(im_double * level);
 imshow(im_level)
 title(sprintf('%i grey levels', level))
 
+
 % 3.1
 % Generate an image with gaussian noise (m, var) overlapped
 figure(4)
@@ -45,10 +46,25 @@ im_salt_and_pepper = imnoise(original_image,'salt & pepper',probability);
 imshow(im_salt_and_pepper)
 title(sprintf('Image with salt & pepper noise (%f)',probability))
 
+
 % 4
 % Calculate the root mean square error of an image
 im_edited = im_level;
 rootmse = imrootmse(original_image,im_edited)
+
+
+% 5
+% Calculate the entropy of an image
+figure(6)
+original_image = imread('standard_test_images/mandril_color.tif');
+imshow(original_image);
+title('Mandril color')
+figure(7)
+im_grey = rgb2gray(original_image);
+imshow(im_grey);
+title('Mandril gray')
+image_entropy_func = entropy(im_grey)
+
 
 
 
