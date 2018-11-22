@@ -22,7 +22,7 @@ title('Black and White')
 
 % 2.1
 figure(3)
-level = 128
+level = 128;
 im_double = im2double(original_image);
 im_level = uint8(im_double * level);
 imshow(im_level)
@@ -31,15 +31,25 @@ title(sprintf('%i grey levels', level))
 % 3.1
 % Generate an image with gaussian noise (m, var) overlapped
 figure(4)
-m = 0
-var =0.1
+m = 0;
+var =0.1;
 im_gauss_noise = imnoise(original_image,'gaussian',m,var);
 imshow(im_gauss_noise)
 title(sprintf('Image with gaussian noise (m = %f, var = %f)', m, var))
 
-%3.1
+%3.2
 % Generate an image with salt & pepper noise overlapped
-p = 0.02
+figure(5)
+probability = 0.05;
+im_salt_and_pepper = imnoise(original_image,'salt & pepper',probability);
+imshow(im_salt_and_pepper)
+title(sprintf('Image with salt & pepper noise (%f)',probability))
+
+% 4
+% Calculate the root mean square error of an image
+rootmse = imrootmse(in_gauss
+
+
 
 
 

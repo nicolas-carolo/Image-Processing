@@ -45,6 +45,12 @@ im_salt_and_pepper = imnoise(original_image,'salt & pepper',probability);
 imshow(im_salt_and_pepper)
 title(sprintf('Image with salt & pepper noise (%f)',probability))
 
+% 4
+% Calculate the root mean square error of an image
+im_edited = im_level;
+rootmse = imrootmse(original_image,im_edited)
+
+
 
 
 
