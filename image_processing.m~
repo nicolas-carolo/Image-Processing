@@ -87,17 +87,16 @@ imshow(image_block_4);
 % plot the istograms of the previous subplot
 figure(8)
 subplot(2,2,1)
-hist1 = imhist(image_block_1);
+hist1 = imhist(image_block_1)
 bar(hist1)
 subplot(2,2,2)
-hist2 = imhist(image_block_2);
+hist2 = imhist(image_block_2)
 bar(hist2)
 subplot(2,2,3)
-hist3 = imhist(image_block_3);
-bar(hist3)
+hist3 = imhist(image_block_3)
+bar(hist1)
 subplot(2,2,4)
-hist4 = imhist(image_block_4);
-bar(hist4)
+hist1 = imhist(image_block_4)
 
 
 
