@@ -63,7 +63,8 @@ figure(7)
 im_grey = rgb2gray(original_image);
 imshow(im_grey);
 title('Mandril gray')
-image_entropy_func = entropy(im_grey)
+image_entropy = entropy(im_grey)
+image_entropy_func = imentropy(im_grey)
 
 
 
